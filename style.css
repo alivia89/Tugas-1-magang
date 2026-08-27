@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.site-header {
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.job-container {
+    display: grid; /* Wajib ada untuk mengaktifkan sistem grid */
+    
+    /* Mengatur lebar minimum tiap kartu kecil (misalnya 280px) 
+       sehingga jika layar lebar, kotaknya otomatis berjejer kesamping */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    
+    gap: 20px; /* Jarak spasi antar kotak kecil */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Supaya posisinya berada di tengah layar */
+}
+
+.job-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px; /* Jarak antar card kalau nanti ditumpuk */
+}
+
+/* Mengatur tata letak header card (logo berdampingan dengan teks) */
+.job-header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara logo dan teks */
+    margin-bottom: 12px;
+}
+
+/* Mengatur ukuran kotak logo perusahaan */
+.company-logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Membuat logo berbentuk lingkaran (opsional) */
+    object-fit: cover;
+    background-color: #e0e0e0; /* Warna placeholder jika file gambar belum ada */
+}
+
+/* Styling teks nama perusahaan */
+.company-name {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Styling bagian detail (lokasi, gaji, kategori, rating) */
+.job-details {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.job-details p {
+    margin-bottom: 4px;
+}
+
+.btn-lamar {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 10px;
+}
